@@ -1,5 +1,6 @@
 # WinRM-fs Gem Changelog
 # Unreleased
+- Replace erubi with stdlib erb (drop the third-party dependency)
 - Upgrade rubyzip to `~> 3.0` (migrate to the keyword-argument API)
 - Require Ruby >= 3.0 (drop EOL 2.5/2.6/2.7)
 - Allow rake 13.x
