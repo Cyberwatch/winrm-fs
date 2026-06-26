@@ -1,4 +1,9 @@
 # WinRM-fs Gem Changelog
+# Unreleased
+- Require Ruby >= 3.0 (drop EOL 2.5/2.6/2.7)
+- Allow rake 13.x
+- CI: trigger on `main`, bump checkout to v4, add Ruby 4.0
+
 # 1.3.5
 - Optimize requires
 - Ensure connections are closed

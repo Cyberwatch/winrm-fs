@@ -1,4 +1,4 @@
-version: "master-{build}"
+version: "main-{build}"
 
 image: Visual Studio 2019
 platform:
@@ -9,18 +9,22 @@ environment:
   winrm_password: Pass@word1
 
   matrix:
-    - ruby_version: "27"
-      winrm_endpoint: http://localhost:5985/wsman
     - ruby_version: "31"
       winrm_endpoint: http://localhost:5985/wsman
-    - ruby_version: "30"
+    - ruby_version: "32"
+      winrm_endpoint: http://localhost:5985/wsman
+    - ruby_version: "33"
+      winrm_endpoint: http://localhost:5985/wsman
+    - ruby_version: "34"
+      winrm_endpoint: http://localhost:5985/wsman
+    - ruby_version: "40"
       winrm_endpoint: http://localhost:5985/wsman
 
 clone_folder: c:\projects\winrm-fs
 clone_depth: 1
 branches:
   only:
-    - master
+    - main
 
 install:
   - ps: net user /add $env:winrm_user $env:winrm_password
